@@ -14,6 +14,7 @@ client.on("message", (message) => {
   const execute = messageConfig(message, { prefix: "!" })
 
   execute("play", async (args) => {
+    if(!args) return 
     await music.execute(args)
   })
 })
